@@ -1,0 +1,14 @@
+RewriteEngine On
+#if this is in a folder, edit this. example.com/mainty/ would be /mainty/
+RewriteBase /
+
+# Redirect to HTTPS (optional, uncomment if needed)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Don't rewrite files or directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite everything else to index.php
+RewriteRule ^(.*)$ index.php [L,QSA]

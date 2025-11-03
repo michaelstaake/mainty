@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  mainty:
+    build: .
+    container_name: mainty-app
+    ports:
+      - "8080:80"
+    volumes:
+      - ./data:/var/www/html/data
+      # Uncomment below to sync code changes in development
+      # - .:/var/www/html
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html
+    restart: unless-stopped
