@@ -1,6 +1,6 @@
 # Mainty
 
-A simple PHP web app for tracking vehicle maintenance records. Free, simple, open source, and self-hosted. Use Docker, or host it on any Apache/PHP web server. Uses SQLite for easy backup, with built-in Export via JSON or HTML so you can import that data into something else or print records for your mechanic or the next owner of your vehicle.
+A simple PHP web app for tracking vehicle maintenance records. Free, easy, responsive, open source, and self-hosted. Use Docker, or host it on any Apache/PHP web server. Uses SQLite for easy backup, with built-in Export via JSON or HTML so you can import that data into something else or print records for your mechanic or the next owner of your vehicle.
 
 ## Requirements
 
