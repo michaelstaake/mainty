@@ -7,6 +7,7 @@ A simple PHP web app for tracking vehicle maintenance records. Free, simple, ope
 - Apache web server
 - PHP 8 or higher
 - SQLite extension
+- If you're using Docker, this should be handled automatically, and you don't need to worry about it.
 
 ## Installation
 
