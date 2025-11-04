@@ -37,3 +37,7 @@ When you first access the app, you'll be prompted to:
 2. Initialize the database
 
 That's it! You're ready to start tracking your vehicle maintenance.
+
+## Need help? Want to learn more? Go to the official GitHub!
+
+https://github.com/michaelstaake/mainty
