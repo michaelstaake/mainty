@@ -40,8 +40,8 @@
         
         <!-- Vehicle Info Card -->
         <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
-            <div class="flex items-start justify-between">
-                <div class="flex items-start space-x-4">
+            <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+                <div class="flex flex-col sm:flex-row items-start gap-4">
                     <div class="bg-blue-100 p-4 rounded-lg">
                         <i class="bi bi-car-front-fill text-blue-600 text-3xl"></i>
                     </div>
@@ -69,15 +69,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex space-x-2">
+                <div class="flex flex-wrap gap-2">
                     <button onclick="showEditVehicleModal()" 
                             class="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg transition">
-                        <i class="bi bi-pencil"></i> Edit
+                        <i class="bi bi-pencil"></i> <span class="hidden sm:inline">Edit</span>
                     </button>
                     <div class="relative">
                         <button onclick="toggleExportMenu()" 
                                 class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition">
-                            <i class="bi bi-download"></i> Export
+                            <i class="bi bi-download"></i> <span class="hidden sm:inline">Export</span>
                         </button>
                         <div id="exportMenu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-10">
                             <a href="<?php echo url('/vehicles/' . $vehicle['id'] . '/export/json'); ?>" 
@@ -161,17 +161,17 @@
                 <div class="space-y-4">
                     <?php foreach ($maintenanceItems as $item): ?>
                         <div class="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition">
-                            <div class="flex justify-between items-start">
+                            <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-3">
                                 <div class="flex-1">
-                                    <div class="flex items-center space-x-3 mb-2">
+                                    <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-2">
                                         <h4 class="text-lg font-semibold text-gray-800"><?php echo htmlspecialchars($item['name']); ?></h4>
                                         <?php if ($item['cost']): ?>
-                                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">
+                                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm w-fit">
                                                 $<?php echo number_format($item['cost'], 2); ?>
                                             </span>
                                         <?php endif; ?>
                                     </div>
-                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm text-gray-600 mb-2">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 text-sm text-gray-600 mb-2">
                                         <div>
                                             <i class="bi bi-calendar3"></i>
                                             <?php echo date('M d, Y', strtotime($item['date'])); ?>
@@ -197,14 +197,14 @@
                                         <p class="text-sm text-gray-600 mt-2"><?php echo nl2br(htmlspecialchars($item['description'])); ?></p>
                                     <?php endif; ?>
                                 </div>
-                                <div class="flex space-x-2 ml-4">
+                                <div class="flex sm:flex-row gap-2 lg:ml-4">
                                     <button onclick='showEditMaintenanceModal(<?php echo json_encode($item); ?>)' 
-                                            class="text-blue-600 hover:text-blue-800">
+                                            class="text-blue-600 hover:text-blue-800 px-2">
                                         <i class="bi bi-pencil"></i>
                                     </button>
                                     <form method="POST" action="<?php echo url('/maintenance/' . $item['id'] . '/delete'); ?>" 
                                           onsubmit="return confirm('Are you sure you want to delete this record?')" class="inline">
-                                        <button type="submit" class="text-red-600 hover:text-red-800">
+                                        <button type="submit" class="text-red-600 hover:text-red-800 px-2">
                                             <i class="bi bi-trash"></i>
                                         </button>
                                     </form>

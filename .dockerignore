@@ -1,0 +1,9 @@
+data/mainty.db
+error_log
+.DS_Store
+.git
+.gitignore
+README.md
+QUICKSTART.md
+DOCKER.md
+.htaccess

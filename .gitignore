@@ -1,1 +1,24 @@
+# Database
+data/mainty.db
+data/*.db
+
+# Logs
+error_log
+*.log
+
+# OS Files
 .DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+
+# htaccess
+.htaccess
