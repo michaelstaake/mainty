@@ -38,7 +38,13 @@
             </div>
         <?php endif; ?>
         
-        <h2 class="text-2xl font-bold text-gray-800 mb-6">Settings</h2>
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold text-gray-800">Settings</h2>
+            <a href="<?php echo url('/logout'); ?>" 
+               class="inline-flex items-center bg-red-100 hover:bg-red-200 text-red-700 px-4 py-2 rounded-md transition">
+                <i class="bi bi-box-arrow-right mr-2"></i> Logout
+            </a>
+        </div>
         
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <!-- Quick Tasks Section -->
@@ -113,15 +119,19 @@
             </div>
         </div>
         
-        <!-- Logout Section -->
-        <div class="mt-6 bg-white rounded-lg shadow-sm p-6">
-            <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                <i class="bi bi-box-arrow-right text-red-500 mr-2"></i>
-                Account
+        <!-- Powered by Mainty Section -->
+        <div class="mt-6 bg-white rounded-lg shadow-sm p-6 text-center">
+            <h3 class="text-lg font-semibold text-gray-800 mb-2 flex items-center justify-center">
+                <i class="bi bi-github text-gray-700 mr-2"></i>
+                Powered by Mainty, a project by Michael Staake and the community.
             </h3>
-            <a href="<?php echo url('/logout'); ?>" 
-               class="inline-block bg-red-100 hover:bg-red-200 text-red-700 px-6 py-2 rounded-md transition">
-                <i class="bi bi-box-arrow-right"></i> Logout
+            <p class="text-sm text-gray-600 mb-3">
+                Get the latest version, learn more, or report issues on the official project GitHub.
+            </p>
+            <a href="https://github.com/michaelstaake/mainty" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                <i class="bi bi-box-arrow-up-right mr-1"></i>
+                github.com/michaelstaake/mainty
             </a>
         </div>
     </main>
