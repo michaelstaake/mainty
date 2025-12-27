@@ -2,6 +2,9 @@ RewriteEngine On
 #if this is in a folder, edit this. example.com/mainty/ would be /mainty/
 RewriteBase /
 
+# Block access to data directory
+RewriteRule ^data/ - [F,L]
+
 # Redirect to HTTPS (optional, uncomment if needed)
 # RewriteCond %{HTTPS} off
 # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
