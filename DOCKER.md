@@ -126,8 +126,6 @@ For production:
 Example production `docker-compose.yml`:
 
 ```yaml
-version: '3.8'
-
 services:
   mainty:
     build: .
@@ -136,12 +134,9 @@ services:
       - "8080:80"
     volumes:
       - ./data:/var/www/html/data
+      # Uncomment below to sync code changes in development
+      # - .:/var/www/html
     environment:
       - APACHE_DOCUMENT_ROOT=/var/www/html
-    restart: always
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "10m"
-        max-file: "3"
+    restart: unless-stopped
 ```

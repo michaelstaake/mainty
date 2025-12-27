@@ -13,11 +13,15 @@ A simple PHP web app for tracking vehicle maintenance records. Free, easy, respo
 
 ### Option 1: Docker
 
+Once you have Docker working on your computer, enter the directory where you have placed Mainty and run the following command to start the services:
+
 ```bash
 docker-compose up -d
 ```
 
 Then open http://localhost:8080
+
+When you are done using Mainty, you can run the following command to stop the services:
 
 ### Option 2: Traditional Web Server
 
