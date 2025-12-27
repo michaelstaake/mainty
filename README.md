@@ -23,6 +23,10 @@ Then open http://localhost:8080
 
 When you are done using Mainty, you can run the following command to stop the services:
 
+```bash
+docker-compose down
+```
+
 ### Option 2: Traditional Web Server
 
 1. Upload the entire folder to your web server
