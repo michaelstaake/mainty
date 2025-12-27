@@ -4,16 +4,16 @@ A simple PHP web app for tracking vehicle maintenance records. Free, easy, respo
 
 ## Requirements
 
+- If you're using Docker, these requirements should be handled automatically, and you don't need to worry about them:
 - Apache web server
 - PHP 8 or higher
 - SQLite extension
-- If you're using Docker, these requirements should be handled automatically, and you don't need to worry about it.
 
 ## Installation
 
 ### Option 1: Docker
 
-Once you have Docker working on your computer, enter the system where you have placed Mainty and run the following command to start the services:
+Once you have Docker working on your system, enter the directory where you have placed Mainty and run the following command to start the services:
 
 ```bash
 docker-compose up -d
