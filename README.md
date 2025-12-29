@@ -39,6 +39,6 @@ docker-compose down
 5. If everything is configured correctly, you'll see the setup page
 6. Set your password to initialize the database
 
-## Need help? Want to learn more? Go to the official GitHub!
+## Need help? Want to learn more?
 
-https://github.com/michaelstaake/mainty
+https://michaelstaake.com/projects/mainty/
